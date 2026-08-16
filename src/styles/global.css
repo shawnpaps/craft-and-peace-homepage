@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pine: #1F2E22;
+  --color-pine-deep: #141F17;
+  --color-mustard: #C99A2E;
+  --color-mustard-dim: #8A6B20;
+  --color-paper: #F4EFE3;
+  --color-paper-dim: #B8B2A0;
+
+  /* swap in Fraunces (or similar) for the first slot later */
+  --font-display: Georgia, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}

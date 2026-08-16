@@ -1,0 +1,45 @@
+---
+import "../styles/global.css";
+import TruthCard from "../components/TruthCard.jsx";
+import ShipForm from "../components/ShipForm";
+import ShipList from "../components/ShipList";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <title>craft and peace</title>
+    </head>
+    <body class="bg-pine-deep">
+        <main class="min-h-svh flex flex-col items-center px-6 py-10">
+            <div
+                class="flex-1 flex flex-col items-center justify-center text-center"
+            >
+                <!-- anchor line -->
+                <h1
+                    class="font-display text-4xl sm:text-5xl leading-tight text-paper"
+                >
+                    Software is the craft.<br />
+                    <span class="text-mustard">Creating</span> is the peace.
+                </h1>
+
+                <!-- divider -->
+                <hr class="w-12 my-10 border-t border-paper-dim/30" />
+
+                <!-- interactive island -->
+                <TruthCard client:load />
+            </div>
+            <ShipList client:load />
+
+            <!-- status strip, pinned near the bottom of the viewport -->
+            <p class="font-mono text-sm text-mustard-dim text-center">
+                Aug 16 · what did you ship today?
+            </p>
+            <div class="mt-2 p-5 mb-32">
+                <ShipForm client:load />
+            </div>
+        </main>
+    </body>
+</html>
