@@ -7,7 +7,7 @@ export default function ShipForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const shipList = JSON.parse(localStorage.getItem("shipList"));
+    const shipList = JSON.parse(localStorage.getItem("shipList")) ?? [];
     if (inputValue.trim()) {
       const date = new Date().toISOString().slice(0, 10);
       const newShip = { date, description: inputValue };
