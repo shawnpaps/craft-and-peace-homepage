@@ -3,6 +3,13 @@ import "../styles/global.css";
 import TruthCard from "../components/TruthCard.jsx";
 import ShipForm from "../components/ShipForm";
 import ShipList from "../components/ShipList";
+
+const today = new Date().toISOString().split("T")[0];
+const formattedDate = new Date(today).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+});
 ---
 
 <html lang="en">
@@ -35,7 +42,7 @@ import ShipList from "../components/ShipList";
 
             <!-- status strip, pinned near the bottom of the viewport -->
             <p class="font-mono text-sm text-mustard-dim text-center">
-                Aug 16 · what did you ship today?
+                {`${formattedDate} · what did you ship today?`}
             </p>
             <div class="mt-2 p-5 mb-32">
                 <ShipForm client:load />
